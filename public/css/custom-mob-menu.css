@@ -1,0 +1,138 @@
+
+body.offcanvas-active{
+  overflow:hidden;
+}
+
+.offcanvas-header{ display:none; }
+
+.screen-overlay {
+  width:0%;
+  height: 100%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+.screen-overlay.show {
+  transition:opacity .5s ease, width 0s;
+  opacity:1;
+  width:100%;
+  visibility:visible;
+}
+
+@media all and (max-width:767px) { 
+  
+  .offcanvas-header{ display:block; }
+
+  .mobile-offcanvas{
+    background: #2f3859;
+    visibility: hidden;
+    transform:translateX(100%);
+    border-radius:0; 
+    display:block;
+    position: fixed;
+    top: 0; right:0;
+    height: 100%;
+    z-index: 999999;
+    width:80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+  }
+
+  .mobile-offcanvas.show{
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .mob-menu-btn .material-icons {
+    line-height: unset; 
+  }
+}
+
+
+
+/* Desktop Rightside Menu */
+.bg-light {
+  padding: 2rem;
+}
+.offcanvas-active{
+  overflow:hidden;
+}
+
+.screen-overlay {
+  width:0%;
+  height: 100%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+.screen-overlay.show {
+  transition:opacity .5s ease, width 0s;
+  opacity:1;
+  width:100%;
+  visibility:visible;
+}
+
+.offcanvas{
+  width:250px;
+  visibility: hidden;
+  transform:translateX(-100%);
+  transition:all .2s;
+  border-radius:0; 
+  box-shadow: 0 5px 10px rgba(0,0,0, .2);
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1200;
+  background-color: #031b37;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+.offcanvas .navbar-nav>li {
+  float: left;
+  width: 100%;
+}
+
+.offcanvas.offcanvas-right {
+ right: 0;
+ left: auto;
+ transform: translateX(100%); 
+}
+
+.offcanvas.show{
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform .2s;
+}
+
+.offcanvas .btn-close {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+}
+
+.custom-tooltip-styling-l {
+  position: relative;
+  z-index: 99999 !important;
+  opacity: 1;
+  background: #fff;
+  color:#000;
+  font-size: 10px;
+  padding:5px;
+  top:0px;
+  width: 50px;
+
+}
